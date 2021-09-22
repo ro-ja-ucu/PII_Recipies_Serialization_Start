@@ -3,17 +3,18 @@ using Recipies;
 
 namespace LibraryTests
 {
+    [SetCulture("en-US")]
     public class RecipeTests
     {
         private static string productDescription = "Test Product";
         private static double unitCost = 9.99;
-        private static string productJson = $@"{{""Description"":""{productDescription}"",""UnitCost"":9.99}}";
+        private static string productJson = $@"{{""Description"":""{productDescription}"",""UnitCost"":{unitCost}}}";
         private static string equipmentDescription = "Test Equipment";
         private static double hourlyCost = 99.99;
-        private static string equipmentJson = $@"{{""Description"":""{equipmentDescription}"",""HourlyCost"":99.99}}";
+        private static string equipmentJson = $@"{{""Description"":""{equipmentDescription}"",""HourlyCost"":{hourlyCost}}}";
         private static double quantity = 999.99;
         private static int time = 10;
-        private static string stepJson = $@"{{""Input"":{productJson},""Quantity"":999.99,""Time"":{time},""Equipment"":{equipmentJson}}}";
+        private static string stepJson = $@"{{""Input"":{productJson},""Quantity"":{quantity},""Time"":{time},""Equipment"":{equipmentJson}}}";
 
         private static string recipeJson = $@"{{""FinalProduct"":{productJson},""Steps"":[{stepJson}]}}";
 

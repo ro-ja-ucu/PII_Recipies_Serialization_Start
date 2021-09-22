@@ -2,7 +2,7 @@
 ## FIT
 ### Programación II
 
-Este código de ejemplo está basado en las recetas de cocina que involucran ingredientes y equipamiento que hemos usado antes..
+Este código de ejemplo está basado en las recetas de cocina que involucran ingredientes y equipamiento que hemos usado antes.
 
 > :warning: El código no compila.
 

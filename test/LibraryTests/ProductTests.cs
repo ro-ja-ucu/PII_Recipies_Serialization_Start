@@ -3,6 +3,7 @@ using Recipies;
 
 namespace LibraryTests
 {
+    [SetCulture("en-US")]
     public class ProductTests
     {
         [SetUp]
@@ -15,7 +16,7 @@ namespace LibraryTests
         {
             string description = "Test Product";
             double unitCost = 9.99;
-            string expected = $@"{{""Description"":""{description}"",""UnitCost"":9.99}}";
+            string expected = $@"{{""Description"":""{description}"",""UnitCost"":{unitCost}}}";
 
             IJsonConvertible Product = new Product(description, unitCost);
             string actual = Product.ConvertToJson();
@@ -28,7 +29,7 @@ namespace LibraryTests
         {
             string description = "Test Product";
             double unitCost = 9.99;
-            string json = $@"{{""Description"":""{description}"",""UnitCost"":9.99}}";
+            string json = $@"{{""Description"":""{description}"",""UnitCost"":{unitCost}}}";
 
             Product Product = new Product(json);
 
